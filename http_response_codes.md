@@ -1,0 +1,96 @@
+# HTTP Status Codes
+
+- 204 01-002 xxxxxxxx GET Primary key record not found
+- 204 01-003 RangeBegin Key provided for DELETE not found.
+- 204 01-004 xxxxxxxx Record not found on zFAM table.
+- 204 01-020 xxxxxxxx Record not found on Primary Column Index
+- 204 01-021 xxxxxxxx Record not found on Secondary Column Index
+- 204 02-002 xxxxxxxx DELETE Primary key record not found
+- 204 03-002 xxxxxxxx PUT Primary key record not found
+- 204 03-020 xxxxxxxx Record not found while processing spanned segments
+- 204 04-020 xxxxxxxx Error on segment array scan.
+- 204 05-020 xxxxxxxx Record not found while accessing zQL xxxxxxx fields
+- 204 07-021 xxxxxxxx Error on Segment Array Reset.
+- 206 01-003 Maximum delete of 1000 records completed successfully.
+- 206 01-007 Partial results due to buffer full condition.
+- 400 01-001 Invalid HTTP method detected during security authorization
+- 400 01-002 WEB RECEIVE error
+- 400 01-010 Primary Key is not provided and zFAM-UID header is not present.
+- 400 01-020 Primary key not present in WHERE statement on SELECT command.
+- 400 01-030 Primary key not provided on zQL UPDATE (PUT).
+- 400 01-040 Primary key not provided on zQL DELETE.
+- 400 02-001 Invalid HTTP method detected during Basic Mode FAxxFD process
+- 400 02-002 Invalid URI format. Must have seven slashes.
+- 400 02-010 Primary Key and zFAM-UID are present, but zFAM-Concat is omitted.
+- 400 03-002 URI Key exceeds 255 byte maximum
+- 400 03-010 Primary Key and zFAM-Concat are present, but zFAM-UID is omitted.
+- 400 04-001 Invalid HTTP method detected during Query Mode process.
+- 400 04-002 URI Key missing on GET request
+- 400 04-010 zFAM-UID and zFAM-Concat are present, but Primary key is omitted.
+- 400 05-001 Invalid HTTP method detected during Query Mode security process.
+- 400 05-002 URI Key missing on PUT request
+- 400 05-010 Primary key and zUID length exceeds FAxxFD defined key length
+- 400 06-001 Query Mode syntax error while parsing INSERT command.
+- 400 06-002 URI Key missing on DELETE request
+- 400 06-010 Primary key length exceeds FAxxFD defined key length
+- 400 07-001 Query Mode syntax error while parsing SELECT command.
+- 400 07-002 URI Key missing on POST request
+- 400 07-010 zUID exceeds FAxxFD defined key length
+- 400 08-001 Query Mode syntax error while parsing UPDATE command.
+- 400 08-002 DEFINE Named Counter for Modulo failed.
+- 400 09-001 Query Mode syntax error while parsing DELETE command.
+- 400 09-002 zFAM task abended during I/O processing
+- 400 10-001 Invalid query string on POST/PUT request DFHCOMMAREA parser.
+- 400 10-002 zFAM-RangeBegin or zFAM-RangeEnd specified for DELETE request.
+- 400 11-002 zFAM-RangeBegin is less than zFAM-RangeEnd for DELETE request.
+- 401 01-001 Basic Authentication credentials not present in HTTPS request
+- 401 02-001 Basic Authentication credentials invalid in HTTPS request
+- 401 03-001 RACF rejected UserID/Password provided in the HTTPS header
+- 401 04-001 HTTP/GET request received.  Basic Mode Read Only is disabled
+- 401 05-001 HTTP/PUT, POST, DELETE not allowed in Basic Mode
+- 401 06-001 HTTPS Basic Mode. UserID not found in FAxxSD security table
+- 401 07-001 HTTPS Basic Mode xxxxxx UserID not allowed xxxxxxx access
+- 401 11-001 HTTP/GET request received.  Query Mode Read Only is disabled
+- 401 12-001 HTTP/PUT, POST, DELETE not allowed in Query Mode
+- 401 13-001 HTTPS Query Mode.  UserID not found in FAxxSD security table
+- 401 14-001 HTTPS Query Mode.  UserID not authorized for requested field
+- 403 01-001 Query Mode request failed due to FAxxFD table not defined.
+- 405 01-001 Invalid Query Mode command on xxxxxx method. Must be an xxxxxx.
+- 409 01-002 xxxxxxxx GET row-level lock failed.  Record already locked
+- 409 01-010 xxxxxxxx Duplicate record when inserting a record.
+- 409 02-002 xxxxxxxx POST/WRITE duplicate record for primary key
+- 409 02-010 xxxxxxxx Duplicate record when inserting a record.
+- 409 03-002 xxxxxxxx PUT rejected.  Request Lock ID not active
+- 411 01-001 Zero length on WEB RECEIVE command during PUT/POST process.
+- 412 01-001 xxxxxxxxxxxxxxxx field not found while parsing xxxxxxx request.
+- 412 01-010 xxxxxxxxxxxxxxxx field defined with invalid field type.
+- 413 01-001 Maximum RECEIVE length exceeded during PUT/POST process.
+- 413 01-002 WEB RECEIVE length exceeded 3.2MB limit
+- 413 02-002 LOB Append exceeds the 2GB limit
+- 414 01-001 Query string maximum length exceeded.
+- 414 02-001 Path maximum length exceeded.
+- 414 03-001 Maximum fields (256) exceeded during xxxxxx (xxxxxx) process.
+- 500 01-001 pppppppp Error when attempting to XCTL for Basic Mode request.
+- 503 01-004 xxxxxxxx DFHCOMMAREA is zero
+- 507 01-002 xxxxxxxx GET/READ Primary key error
+- 507 01-004 xxxxxxxx Error accessing zFAM table.
+- 507 01-010 xxxxxxxx File is disabled.  INSERT request failed.
+- 507 01-021 xxxxxxxx STARTBR error on Secondary Column Index
+- 507 02-002 xxxxxxxx GET/READ references an invalid key on FAxxFILE
+- 507 02-010 xxxxxxxx File is not defined/found. INSERT request failed.
+- 507 02-021 xxxxxxxx READNEXT error on Secondary Column Index
+- 507 03-002 xxxxxxxx GET/READ internal key error
+- 507 03-021 xxxxxxxx error on Primary file store
+- 507 04-010 xxxxxxxx NOTOPEN condition. INSERT request failed.
+- 507 04-021 xxxxxxxx Column Index file not found in Parser Array
+- 507 05-002 xxxxxxxx POST/WRITE primary key error
+- 507 05-010 xxxxxxxx INSERT request failed
+- 507 05-021 xxxxxxxx Secondary Column Index not found in CI Array
+- 507 06-002 xxxxxxxx POST/WRITE internal key error
+- 507 07-002 xxxxxxxx PUT/READ UPDATE Primary key error
+- 507 08-002 xxxxxxxx PUT/REWRITE Primary key error
+- 507 09-002 xxxxxxxx PUT/WRITE internal key error
+- 507 10-002 xxxxxxxx GET/READ  internal key error
+- 507 11-002 xxxxxxxx PUT/READ Primary key error during LOB Append.
+- 507 13-002 xxxxxxxx PUT/WRITE Primary key error during LOB Append.
+- 507 03-010 xxxxxxxx NOSPACE in file.  INSERT request failed.
