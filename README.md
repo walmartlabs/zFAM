@@ -31,3 +31,18 @@ zFAM is a cloud enabled distributed NoSQL key/value store (KVS) file system in t
 As part of the product there is a built-in expiration process that runs automatically in the background. Refer to the installation instructions on setting up zFAM instances. Expiration process continually scans the zFAM data looking for keys that have expired and removes them. There are no additional web service calls required to initiate or trigger this component. Based on max time to live values, keys will never live more than 24 hours.
 
 Note: The keys are actually stored in an indexed VSAM file so the keys are stored in sorted ascending order. This allows for the special features to query multiple keys and values in ascending or descending order.
+
+## About this project 
+
+Please refer to the following locations for additional info regarding this project:
+
+- [System Requirements and Considerations.md](./System Requirements and Considerations.md) for minimum software version requirements and key environment configuration considerations
+- [Installation.md](./Installation.md) for instructions on installing and setting up this service
+- [Usage.md](./Usage.md) for API descriptions, sample code snippets for consuming the service, other usage related details
+
+### Contributors
+
+- **_Randy Frerking_**,	Walmart Technology
+- **_Rich Jackson_**, Walmart Technology
+- **_Michael Karagines_**, Walmart Technology
+- **_Trey Vanderpool_**, Walmart Technology
