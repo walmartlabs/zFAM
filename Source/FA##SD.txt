@@ -1,0 +1,14 @@
+Basic Mode Read Only: yea
+Query Mode Read Only: nay
+User=xxxxxxxx,Access,0         1         2         3   ¦
+User=xxxxxxxx,Type  ,012345678901234567890123456789012 ¦
+                                                       ¦
+User=USERID1 ,Read  ,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ¦
+User=USERID1 ,Write ,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ¦
+User=USERID1 ,Delete,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ¦
+                                                       ¦
+User=USERID2 ,Read  ,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ¦
+User=USERID2 ,Write ,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ¦
+User=USERID2 ,Delete,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ¦
+                                                       ¦
+                                                       ¦

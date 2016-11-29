@@ -1,0 +1,34 @@
+***********************************************************************
+* Start FAxxKEY  record buffer                                        *
+***********************************************************************
+WK_REC   DS  0F
+WK_KEY   DS   CL255               zFAM Key  - record key
+WK_ECR   DS   CL01                Event Control Record indicator
+*                                 Y - ECR record
+WK_F_KEY DS  0CL08                FAxxFILE key
+WK_F_IDN DS   CL06                ID number (from zUID)
+WK_F_NC  DS   CL02                Named Counter
+WK_F_OBJ DS   CL04                Object type  - text or bits
+*                                 text - Language Structure, XML, JSON
+*                                 bits - Binary Objects
+WK_F_DD  DS   CL04                FAxx**** DD name
+WK_UID   DS   CL32                zUID
+*                                 Row Level Locking ID
+*                                 Unit Of Work (Commit/Rollback)
+WK_ABS   DS   PL08                Absolute Time
+*                                 UOW lock time
+*                                 ECR expiration time
+WK_LOCK  DS   CL01                Row Level Locking Time (seconds)
+WK_LOB   DS   CL01                Large Object (LOB) indicator
+*                                 L (record is handled as LOB)
+WK_SEGS  DS   CL02                Maximum segments in the FILE record
+WK_TTL   DS   PL04                Record Retention Duration (TTL)
+WK_TTL_T DS   CL01                TTL type
+*                                 TTL (WK_TTL) expressed in days
+*                                 TTL (WK_TTL) expressed in years
+         DS   CL191               Future use
+E_WK     EQU  *-WK_KEY            record length
+*
+***********************************************************************
+* End   FAxxKEY  record buffer                                        *
+***********************************************************************

@@ -1,0 +1,21 @@
+  DELETE @zfam_hlq@.FA@id@KEY.@environment@ CLUSTER PURGE
+  SET MAXCC=0
+
+  DEFINE CLUSTER -
+  (NAME(@zfam_hlq@.FA@id@KEY.@environment@) -
+  BUFFERSPACE(68096) -
+  DATACLAS(@data_class@) -
+  INDEXED -
+  KEYS(255 0) -
+  MANAGEMENTCLASS(@mgt_class@) -
+  LOG(UNDO) -
+  RECORDSIZE(512 512) -
+  SHAREOPTIONS(2 3) -
+  RECOVERY -
+  STORAGECLASS(@stg_class@)) -
+  DATA(NAME(@zfam_hlq@.FA@id@KEY.@environment@.DATA) -
+  CYLINDERS(@pri_cyl@ @sec_cyl@) -
+  CONTROLINTERVALSIZE(32768)) -
+  INDEX(NAME(@zfam_hlq@.FA@id@KEY.@environment@.INDEX) -
+  TRACKS(120 60) -
+  CONTROLINTERVALSIZE(2560))

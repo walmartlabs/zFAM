@@ -1,0 +1,11 @@
+ID=001,Col=0000001,Len=000010,Type=N,Sec=01,Name=Customer        ¦
+ID=000,Col=0000011,Len=000015,Type=C,Sec=01,Name=FirstName       ¦
+ID=000,Col=0000026,Len=000015,Type=C,Sec=01,Name=MiddleName      ¦
+ID=000,Col=0000041,Len=000025,Type=C,Sec=01,Name=LastName        ¦
+ID=000,Col=0000066,Len=000006,Type=N,Sec=01,Name=StreetNumber    ¦
+ID=000,Col=0000072,Len=000020,Type=C,Sec=01,Name=StreetName      ¦
+ID=002,Col=0000092,Len=000020,Type=C,Sec=01,Name=City            ¦
+ID=000,Col=0000112,Len=000020,Type=C,Sec=01,Name=State           ¦
+ID=000,Col=0000132,Len=000005,Type=N,Sec=01,Name=ZipCode         ¦
+ID=000,Col=0000137,Len=000004,Type=N,Sec=01,Name=ZipCodeExt      ¦
+ID=003,Col=0000141,Len=000010,Type=N,Sec=01,Name=PhoneNumber     ¦

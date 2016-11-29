@@ -1,0 +1,43 @@
+/* REXX */
+/***************************************************************/
+/* REXXREPL will replace all occurrences of word 1 with word 2 */
+/*                                                             */
+/* Requirements                                                */
+/* INPUT DD   is the input dataset                             */
+/* OUTPUT DD  is the output dataset                            */
+/* STRINGS DD is the replacement strings dataset               */
+/***************************************************************/
+
+"EXECIO * DISKR INPUT   (STEM RECORDIN. FINIS"
+"EXECIO * DISKR STRINGS (STEM STRINGS.  FINIS"
+
+/* Enter a loop for each record of the INPUT DD */
+DO I = 1 TO RECORDIN.0
+   /* Enter a loop for each replacement string */
+   DO S = 1 TO STRINGS.0
+      /* If a comment, skip it */
+      IF LEFT(WORD(STRINGS.S,1),1) = '*' THEN ITERATE
+      PREVPOS = 0
+      OLDSTRING = WORD(STRINGS.S,1)
+      NEWSTRING = WORD(STRINGS.S,2)
+      /* Replace each occurrence of the replacement string */
+      DO FOREVER
+         TEMPPOS = POS(OLDSTRING,RECORDIN.I)
+         IF TEMPPOS = 0 THEN LEAVE
+         IF PREVPOS = TEMPPOS THEN LEAVE
+         PREVPOS = TEMPPOS
+         TEMPPOS = TEMPPOS - 1
+         TEMPPRE = SUBSTR(RECORDIN.I,1,TEMPPOS)
+         TEMPPRE = TEMPPRE||NEWSTRING
+         TEMPPOS = TEMPPOS + LENGTH(OLDSTRING)
+         TEMPPOS = TEMPPOS + 1
+         TEMPSUF = SUBSTR(RECORDIN.I,TEMPPOS)
+         RECORDIN.I = TEMPPRE||TEMPSUF
+      END
+   END
+   QUEUE RECORDIN.I
+END
+
+"EXECIO" QUEUED() "DISKW OUTPUT (FINIS"
+
+RETURN

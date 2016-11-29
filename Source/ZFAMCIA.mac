@@ -1,0 +1,17 @@
+***********************************************************************
+* Start FAxxCIxx record buffer                                        *
+***********************************************************************
+CI_REC   DS  0F
+CI_KEY   DS  0CL64                zFAM CI   - record key
+CI_FIELD DS   CL56                field data from FILE store record
+CI_I_KEY DS  0CL08                FAxxFILE internal  key
+CI_IDN   DS   CL06                ID Number (from zUID)
+CI_NC    DS   CL02                NC Number (Named Counter)
+CI_DS    DS   CL04                FAxxFILE DDNAME (Data Store)
+*                                 First entry is FILE
+*                                 Subsequent entries are DS01-DS99
+E_CI     EQU  *-CI_KEY            record length
+*
+***********************************************************************
+* End   FAxxCIxx record buffer                                        *
+***********************************************************************

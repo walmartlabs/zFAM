@@ -1,0 +1,26 @@
+***********************************************************************
+* Start FAxxFILE record buffer                                        *
+***********************************************************************
+DF_DSECT DSECT
+DF_KEY   DS  0CL16                zFAM File - Key
+DF_IDN   DS   CL06                ID Number (from zUID)
+DF_NC    DS   CL02                NC (Named Counter)
+DF_SEG   DS   CL02                Halfword Segment number
+DF_SUFX  DS   CL02                Halfword Suffix  number
+DF_NULL  DS   CL04                Halfword zeroes  (not used)
+*
+DF_ABS   DS   CL08                PD Absolute Time of INSERT/UPDATE
+DF_TTL   DS   CL04                PD Retention (TTL)
+DF_SEGS  DS   CL02                Halfword Number of segments
+DF_TYPE  DS   CL01                Retention type (TTL)
+*                                 D - TTL expressed in Days
+*                                 Y - TTL expressed in years
+         DS   CL14                Not Used (for future enhancements)
+DF_K_KEY DS   CL255               FAxxKEY record key
+DF_MEDIA DS   CL56                Media type
+DF_E     EQU  *-DF_KEY            Header length
+DF_DATA  DS   CL32000             Application data
+*
+***********************************************************************
+* End   FAxxFILE record buffer                                        *
+***********************************************************************

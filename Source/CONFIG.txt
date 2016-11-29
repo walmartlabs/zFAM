@@ -1,0 +1,43 @@
+* @auth@        is the value of the AUTHENTICATE parameter for
+*               the https definition
+* @certficate@  is for the CERTIFICATE parameter in the
+*               TCPIPService definition. Specify certificate as
+*               CERTIFICATE(server-ssl-certificate-name)
+* @cics_csd@    is the dataset name of the CICS CSD
+* @cics_hlq@    is the high level qualifier for CICS datasets
+* @csd_list@    is the CSD group list name
+* @data_class@  is the data class to use for ZFAM files
+* @doct_dd@     is the document template DDNAME defined to CICS region
+* @doct_lib@    is the document template dataset name defined to CICS
+* @zfam_hlq@    is the high level qualifier for ZFAM files
+* @http_port@   is the http port number for ZFAM
+* @https_port@  is the https port number for ZFAM
+* @job_parms@   are the parms following JOB in the JOB card
+* @mgt_class@   is the management class to use for ZFAM files
+* @proc_lib@    is the dataset containing the customized version
+*               of the DFHEITAL proc supplied by IBM
+* @program_lib@ is the dataset to be used for ZFAM programs
+* @rep_port@    is the replication port number
+* @source_lib@  is the dataset containing ZFAM source code. This lib.
+* @stg_class@   is the storage class to use for ZFAM files
+* @tdq@         is the TDQ for messages. Must be 4 bytes
+**********************************************************************
+ @auth@              NO
+ @certficate@
+ @cics_csd@          CICSTS52.CICS.DFHCSD
+ @cics_hlq@          CICSTS52.CICS
+ @csd_list@          DEFAULT
+ @data_class@        DATACLAS
+ @doct_dd@           DOCTDD
+ @doct_lib@          CICSTS.DOCTEMP
+ @zfam_hlq@          CICSTS.ZFAM
+ @http_port@         50200
+ @https_port@        50201
+ @job_parms@         MSGCLASS=R,NOTIFY=&SYSUID
+ @mgt_class@         MGTCLASS
+ @proc_lib@          CICSTS.CICS.PROCLIB
+ @program_lib@       CICSTS.CICS.LINKLIB
+ @rep_port@          50202
+ @source_lib@        CICSTS.ZFAM.SOURCE
+ @stg_class@         STGCLASS
+ @tdq@               CSSL

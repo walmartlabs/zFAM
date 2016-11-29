@@ -1,0 +1,2 @@
+type: AS
+http://sysplex01-fam.mycompany.com:@rep_port@
