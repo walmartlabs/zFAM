@@ -154,9 +154,12 @@ the supplied job or use your own job.
         1. ZFAM090  *Cobol*
         1. ZFAM101  *Cobol*
         1. ZFAM102  *Cobol*
+        1. ZUIDSTCK *Assembler* (Shared with the ZUID repository)
 
 1. Define the CICS resource definitions for ZFAM. In the JCL library, submit the CSDZFAM member. This will install the
 minimum number of definitions for ZFAM.
+*Note: one resource definition, the ZUIDSTCK program definition is shared with the ZUID repository. This may lead to a
+duplicate program definition if both ZUID and ZFAM are installed in the same region and defined in different CSD groups.*
 
 1. Define the http port for ZFAM (optional). If you plan to use an existing http port (TCPIPService definition), you do
 not need to submit this job. If you would like to setup a http port specifically for ZFAM. Submit the CSDZFAMN member in
