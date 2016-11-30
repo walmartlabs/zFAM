@@ -890,7 +890,7 @@ CLC_0096 CLC   0(0,R15),0(R14)         Compare CI Record and WHERE
 ***********************************************************************
 * Trace where we are.                                                 *
 ***********************************************************************
-sy_0100  DS   0H
+SY_0100  DS   0H
          MVC   W_46_M,=C'SY_0100 '     Move trace entry
          BAS   R14,TR_0010             Call trace routine
 *
@@ -1357,21 +1357,21 @@ SY_0640  DS   0H
          BC    B'1000',SY_640GE        ... yes, compare
 *
 SY_640EQ DS   0H
-         EX    R1,CLC_0640             WHERE EQ Record field?
+         EX    R1,CLC_0640             CI Record EQ WHERE field?
          BC    B'1000',SY_0650         ... yes, continue process
          BC    B'1111',SY_0880         ... no,  bypass this record
 *
 SY_640GT DS   0H
-         EX    R1,CLC_0640             WHERE GT Record field?
+         EX    R1,CLC_0640             CI Record GT WHERE field?
          BC    B'0010',SY_0650         ... yes, continue process
          BC    B'1111',SY_0880         ... no,  bypass this record
 *
 SY_640GE DS   0H
-         EX    R1,CLC_0640             WHERE GE Record field?
+         EX    R1,CLC_0640             CI Record GT WHERE field?
          BC    B'1010',SY_0650         ... yes, continue process
          BC    B'1111',SY_0880         ... no,  bypass this record
 *
-CLC_0640 CLC   0(0,R15),0(R14)         Compare WHERE and CI Record
+CLC_0640 CLC   0(0,R14),0(R15)         Compare CI Record and WHERE
 *
 ***********************************************************************
 * CI record and WHERE field match.  Continue parser array process.    *
