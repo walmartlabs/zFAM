@@ -4,7 +4,7 @@
        AUTHOR.  Rich Jackson and Randy Frerking.
       *****************************************************************
       *                                                               *
-      * zFAM - z/OS Frerking Access Manager.                          *
+      * zFAM - z/OS File Access Manager.                              *
       *                                                               *
       * This is the primary Basic Mode zFAM program, which performs   *
       * the following functions:                                      *
