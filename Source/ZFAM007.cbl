@@ -113,6 +113,7 @@
        01  TEXT-ANYTHING          PIC  X(04) VALUE 'text'.
        01  TEXT-PLAIN             PIC  X(56) VALUE 'text/plain'.
        01  APPLICATION-XML        PIC  X(56) VALUE 'application/xml'.
+       01  APPLICATION-JSON       PIC  X(56) VALUE 'application/json'.
 
        01  RANGE-EXCEEDED         PIC  X(01) VALUE SPACES.
        01  PROCESS-COMPLETE       PIC  X(01) VALUE SPACES.
@@ -601,6 +602,7 @@
 
            IF  WEB-MEDIA-TYPE(1:04) EQUAL TEXT-ANYTHING
            OR  WEB-MEDIA-TYPE(1:15) EQUAL APPLICATION-XML
+           OR  WEB-MEDIA-TYPE(1:16) EQUAL APPLICATION-JSON
                EXEC CICS WEB SEND
                     FROM      (ZFAM-MESSAGE)
                     FROMLENGTH(MESSAGE-LENGTH)

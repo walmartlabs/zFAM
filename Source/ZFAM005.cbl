@@ -79,6 +79,7 @@
        01  TEXT-PLAIN             PIC  X(56) VALUE 'text/plain'.
        01  TEXT-HTML              PIC  X(56) VALUE 'text/html'.
        01  APPLICATION-XML        PIC  X(56) VALUE 'application/xml'.
+       01  APPLICATION-JSON       PIC  X(56) VALUE 'application/json'.
 
        01  PROCESS-COMPLETE       PIC  X(01) VALUE SPACES.
        01  FF-SUCCESSFUL          PIC  X(01) VALUE SPACES.
@@ -440,6 +441,7 @@
 
            IF  WEB-MEDIA-TYPE(1:04) EQUAL TEXT-ANYTHING
            OR  WEB-MEDIA-TYPE(1:15) EQUAL APPLICATION-XML
+           OR  WEB-MEDIA-TYPE(1:16) EQUAL APPLICATION-JSON
                MOVE DFHVALUE(SRVCONVERT)     TO SERVER-CONVERT
            ELSE
                MOVE DFHVALUE(NOSRVCONVERT)   TO SERVER-CONVERT.
