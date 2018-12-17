@@ -36,7 +36,7 @@ Note: The keys are actually stored in an indexed VSAM file so the keys are store
 
 Please refer to the following locations for additional info regarding this project:
 
-- [System Requirements and Considerations.md](./System Requirements and Considerations.md) for minimum software version requirements and key environment configuration considerations
+- [System Requirements and Considerations.md](./System%20Requirements%20and%20Considerations.md) for minimum software version requirements and key environment configuration considerations
 - [Installation.md](./Installation.md) for instructions on installing and setting up this service
 - [Usage.md](./Usage.md) for API descriptions, sample code snippets for consuming the service, other usage related details
 
